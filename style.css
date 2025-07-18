@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #6b10a7, #1b0027);
+    color: white;
+}
+
+body *, :root {
+    font-family: "Inter";
+    line-height: 180%;
+}
+
+header {
+    padding-top: 40px;
+    text-align: center;
+    height: 200px;
+}
+
+header img {
+    width:15rem
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 36rem;
+    width: 90%;
+    margin: 3rem auto;
+}
+
+section {
+    background-image: linear-gradient(90deg, #9572FC 10%, #43E7AD 40%, #E2D45C 100%);
+    border-radius: 0.625rem;
+    padding-top: 4px;
+}
+
+section > div {
+    padding: 2rem;
+    padding-top: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #2A2634;
+}
+
+h2 {
+    letter-spacing: -0.47px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    letter-spacing: -0.18px;
+    text-align: center;
+    padding-top: 1rem;
+    color: #b4b4c0;
+}
+
+/* Animações */
+
+main section {
+    opacity: 0;
+    transform: translateY(2rem);
+    animation-name: appear;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }    
+}
+
+/* Formulário */
+
+form {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin: 1.25rem 0;
+}
+
+input, select {
+    all: unset;
+    border: 2px solid #9147ff;
+    border-radius: 0.5rem;
+    padding: 0.675rem;
+    font-size: 0.875rem;
+    background-color: #00000088;
+}
+
+input {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(90deg, #9572FC 20%, #43E7AD 50%, #fc2fe8 100%);
+    padding: 0.675rem;
+    border-radius: 0.5rem;
+    font-weight: thin;
+    
+    transition: all 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+    transition: initial;
+    transform: initial;
+    box-shadow: initial;
+    cursor: not-allowed;
+    color: black;
+}
+
+.loading {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    50%{
+        opacity: 0.5;
+    }
+}
